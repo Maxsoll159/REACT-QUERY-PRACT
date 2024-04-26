@@ -1,12 +1,16 @@
 import { ProductList } from ".."
+import { useProducts } from "../hooks/useProducts"
 
 
 export const CompleteListPage = () => {
+
+  const {isLoading, products} = useProducts({filterKey: ""})
+
   return (
     <div className="flex-col">
       <h1 className="text-2xl font-bold">Todos los productos</h1>
 
-      <ProductList />
+      <ProductList products={products} />
 
     </div>
   )
