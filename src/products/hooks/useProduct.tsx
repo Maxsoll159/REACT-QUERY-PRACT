@@ -7,7 +7,7 @@ interface Options {
 
 export const useProduct = ({ id }: Options) => {
 
-    const { isLoading, isError, error, data: product, isFetching } = useQuery({ queryKey: ['todos', id], queryFn: () => getProduct(id), staleTime: 1000 * 60 * 60 })
+    const { isLoading, isError, error, data: product, isFetching } = useQuery({ queryKey: ['todos', id], queryFn: () => getProduct(id),  })
 
     return {
         error,
